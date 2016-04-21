@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+    <title>Результат - Сайт</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <style type="text/css">
+
+        * {
+            outline: none;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            background: #fff;
+            min-width: 1000px;
+            margin: 0;
+            padding: 0;
+            font: 13px Verdana, Helvetica, sans-serif;
+            color: #000;
+            overflow-y: visible;
+        }
+
+        h1, h3, h4, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            border: none;
+        }
+
+        .clear {
+            display: block;
+            clear: both;
+            font-size: 0;
+            height: 0;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .nowrap {
+            white-space: nowrap;
+        }
+
+        #middle {
+            min-height: 100%;
+        }
+
+        #middle > div {
+            min-height: 0;
+            background: none;
+            border: none;
+        }
+
+        #middle > div > div, #content {
+            margin: 0 auto;
+        }
+
+        #middle > div > div {
+            width: 1000px;
+            margin: 0 auto;
+            background: none;
+            padding: 0;
+        }
+
+        #content {
+            background: none;
+            width: 998px;
+            min-height: 480px;
+            padding: 0;
+        }
+
+        .arial, .uid {
+    font-family: arial, sans-serif;
+    font-size: 16px;
+}
+
+.v-top {
+    vertical-align: top;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.w1 {
+    width: 1%;
+}
+
+.w-right {
+    width: 160px;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.uid {
+    font-size: 28px;
+    white-space: nowrap;
+}
+
+.order_num {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.address {
+    font: 13px 'Times New Roman', Times, serif;
+}
+
+.ticket_info {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+#content .result h2 {
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+#content .better_print {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+}
+
+#content .controls {
+    text-align: center;
+}
+
+#content .controls button {
+    font-size: 22px;
+    padding: 5px 20px;
+    margin-left: 20px;
+}
+
+.cheque {
+    padding-bottom: 20px;
+}
+
+.cheque .text h3, .cheque .text p, .cheque-text {
+    text-indent: 30px;
+    text-align: justify;
+}
+
+.cheque .text p {
+    font-size: 18px;
+    margin: 5px 0 10px;
+    line-height: 1.5;
+}
+
+.cheque .text h3, .cheque-text {
+    font-size: 28px;
+    margin: 20px 0;
+}
+
+.cheque .text b {
+    font-size: 24px;
+}
+
+.cheque .blank {
+    border-top: 1px dashed;
+    border-bottom: 1px dashed;
+    padding: 10px;
+}
+
+.cheque .blank .header {
+    font-weight: bold;
+    font-size: 34px;
+}
+
+.cheque .blank .orderDate {
+    font-size: 14px;
+}
+
+.cheque .blank .barcode {
+    padding-bottom: 5px;
+}
+
+.cheque .blank table {
+    width: 100%;
+    background: #fff;
+    border-collapse: collapse;
+}
+
+.cheque .blank table tr {
+    background: #fff;
+}
+
+.cheque .blank table td, .cheque .blank table th {
+    padding: 2px 5px;
+    border: 1px solid;
+	box-sizing: border-box;
+}
+
+.cheque .blank table th {
+    text-align: left;
+}
+
+.cheque .blank table.info th {
+    font-weight: normal;
+    width: 225px;
+}
+
+.cheque .blank table.info td, .cheque .blank table.places th {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.cheque .blank .places {
+    margin-top: 10px;
+}
+
+.cheque .blank .places span {
+    font-weight: normal;
+}
+
+.cheque .blank .prices {
+    padding: 5px 0 10px;
+}
+
+.cheque .blank .price_info {
+    border: 0;
+    border-collapse: collapse;
+}
+
+.cheque .prices h4 {
+    font-size: 14px;
+}
+
+.cheque .electronic {
+    font-family: "Courier New", monospace;
+    font-size: 16px;
+}
+
+.cheque .electronic .info p {
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 1em;
+}
+
+.cheque .electronic table {
+	table-layout: fixed;
+}
+
+.cheque .electronic table tr.sizing td {
+	border: none;
+	padding: 0;
+}
+
+.cheque .electronic table tr td.terminal {
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.cheque .electronic .barcode {
+    padding: 5px 0 0;
+}
+
+.cheque .blank .ch-num-l {
+    white-space: nowrap;
+    border-right: none;
+}
+
+.cheque .blank .ch-num {
+    white-space: nowrap;
+    border-left: none;
+}
+
+.cheque .blank.electronic .ch-num {
+    /*width: 1px;*/
+    text-align: right;
+}
+
+.cheque .blank.electronic .frow {
+	height: 42px;
+}
+
+#content .return-mrg {
+    margin-bottom: 20px;
+}
+
+.hostName {
+    display: none;
+}
+
+.result_auth > div {
+    margin: 1em;
+}
+
+@media print {
+    @page {
+        margin: 1cm .5cm;
+    }
+
+    body {
+        background: #fff;
+        overflow-y: visible;
+    }
+
+    #middle > div {
+        min-height: 0;
+        background: none;
+        border: none;
+    }
+
+    #middle > div > div, #content {
+        margin: 0 auto;
+        background: none;
+        padding: 0;
+    }
+
+    #header, #footer, #helloUser, .result, .controls, .version, .no_print, #content > div > p {
+        display: none;
+    }
+
+    .cheque .page-break {
+        page-break-after: always;
+    }
+
+    .testMode .hostName {
+        display: block;
+    }
+}
+
+    </style>
+</head>
+<body>
+<div id="middle">
+    <div>
+        <div>
+            <div id="content">
+                                    <div class="cheque">
+                <div class="text">
+        <h3>
+                            Посадочний документ                    </h3>
+    </div>
+    <div class="blank electronic" data-doctype="travel">
+                    <table>
+	<tr class="sizing">
+		<td style="width: 102px"></td>
+		<td style="width: 43px"></td>
+		<td style="width: 79px"></td>
+		<td style="width: 135px"></td>
+		<td style="width: 245px"></td>
+		<td style="width: 142px"></td>
+		<td style="width: 171px"></td>
+	</tr>
+	<tr class="frow">
+		<td class="terminal" rowspan="2">
+			TEРM. №61
+		</td>
+		<td class="bold arial v-top" colspan="3">
+			ПОСАДОЧНИЙ ДОКУМЕНТ
+		</td>
+		<td class="bold nowrap" colspan="2">000B3B41-<span class="uid">EB72-7D17-0001</span></td>
+		<td class="bold arial w-right" rowspan="2">
+			ПН:400758126555<br/>
+			ФН:3000182017<br/>
+			ЗН:ЗТ00000002<br/>
+			ФК:11006143
+		</td>
+	</tr>
+	<tr>
+		<td class="address v-top nowrap" colspan="3">
+                            ПАТ "УКРЗАЛІЗНИЦЯ"<br/>м.Київ, вул.Тверська, буд.5
+            		</td>
+		<td class="v-top order_num" colspan="2">#ИФ2-Н1-3107629-1104</td>
+	</tr>
+	<tr>
+		<td>МПС</td>
+		<td class="bold arial center" colspan="5">
+			ЦЕЙ ПОСАДОЧНИЙ ДОКУМЕНТ Є ПІДСТАВОЮ ДЛЯ ПРОЇЗДУ
+		</td>
+		<td class="align-right nowrap">11.04.2016 20:52</td>
+	</tr>
+	<tr>
+		<td colspan="3">Прізвище, Ім’я</td>
+		<td colspan="2">Жижко Сергій</td>
+		<td>Поїзд</td>
+		<td class="align-right ticket_info w-right">
+							135*ЛБ
+						ФІРМ НШ
+		</td>
+	</tr>
+	<tr>
+		<td class="nowrap w1" colspan="2">Відправлення</td>
+		<td class="w1">2218200</td>
+		<td class="upper ticket_info" colspan="2">Івано-Франківськ</td>
+		<td>Вагон</td>
+		<td class="align-right ticket_info">12 П ОДС</td>
+	</tr>
+	<tr>
+		<td class="nowrap" colspan="2">Призначення</td>
+		<td>2208001</td>
+		<td class="upper ticket_info" colspan="2">Одеса-Головна</td>
+		<td>Місце</td>
+		<td class="align-right ticket_info">022 Пільговий</td>
+	</tr>
+	<tr>
+		<td colspan="3">Дата/час відпр.</td>
+		<td class="ticket_info" colspan="2">24.04.2016 18:26</td>
+		<td>Сервіс</td>
+		<td class="align-right">БІЛ</td>
+	</tr>
+	<tr>
+		<td class="ch-num-l" colspan="2">Дата/час приб.</td>
+		<td class="ch-num">
+					</td>
+		<td class="ticket_info" colspan="2">25.04.2016 09:44</td>
+		<td colspan="2"></td>
+	</tr>
+	<tr>
+		<td colspan="7">
+			ВАРТ=<b>99,99ГРН</b>(КВ.28,27+ПЛ.22,05+СП.20,83+ПДВ.16,65+СТР.0,11+КЗБ.12,08)<br/>
+							В Т.Ч.
+									БІЛ-25,00
+								(З ПДВ)<br/>
+																			#ДОКУМЕНТ ПІЛЬГОВИКА: ПІЛЬГ СТУД ХЕ09089807<br/>
+						#СТР.ВІД Н/В 6000Н.М. ТДВ"СТ", ДОМІНАНТА"КИЇВ,САКСАГАНСЬКОГО,119, T0442200755<br/>
+			<b>ЧАС ВІДПРАВЛЕННЯ КИЇВСЬКИЙ</b>
+		</td>
+	</tr>
+	<tr>
+		<td class="center" colspan="3">
+			<img alt="QR" src="data:image/gif;base64,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"/>		</td>
+		<td colspan="4" class="info arial">
+							<p>Цей Посадочний документ є підставою для проїзду без звернення у касу. Посадочний документ являється розрахунковим документом.</p>
+						<p>Повернення даного Посадочного документа можливе до відправлення поїзда.</p>
+		</td>
+	</tr>
+</table>
+            </div>
+    <div class="hostName">[http://booking.uz.gov.ua/]</div>
+    <div class="clear page-break"></div>
+    <div class="text">
+        <h3>
+                            Посадочний документ                    </h3>
+    </div>
+    <div class="blank electronic" data-doctype="travel">
+                    <table>
+	<tr class="sizing">
+		<td style="width: 102px"></td>
+		<td style="width: 43px"></td>
+		<td style="width: 79px"></td>
+		<td style="width: 135px"></td>
+		<td style="width: 245px"></td>
+		<td style="width: 142px"></td>
+		<td style="width: 171px"></td>
+	</tr>
+	<tr class="frow">
+		<td class="terminal" rowspan="2">
+			TEРM. №61
+		</td>
+		<td class="bold arial v-top" colspan="3">
+			ПОСАДОЧНИЙ ДОКУМЕНТ
+		</td>
+		<td class="bold nowrap" colspan="2">000B3B41-<span class="uid">EB72-7D17-0002</span></td>
+		<td class="bold arial w-right" rowspan="2">
+			ПН:400758126555<br/>
+			ФН:3000182017<br/>
+			ЗН:ЗТ00000002<br/>
+			ФК:11006144
+		</td>
+	</tr>
+	<tr>
+		<td class="address v-top nowrap" colspan="3">
+                            ПАТ "УКРЗАЛІЗНИЦЯ"<br/>м.Київ, вул.Тверська, буд.5
+            		</td>
+		<td class="v-top order_num" colspan="2">#ИФ2-Н2-3107629-1104</td>
+	</tr>
+	<tr>
+		<td>МПС</td>
+		<td class="bold arial center" colspan="5">
+			ЦЕЙ ПОСАДОЧНИЙ ДОКУМЕНТ Є ПІДСТАВОЮ ДЛЯ ПРОЇЗДУ
+		</td>
+		<td class="align-right nowrap">11.04.2016 20:52</td>
+	</tr>
+	<tr>
+		<td colspan="3">Прізвище, Ім’я</td>
+		<td colspan="2">Пластун Анна</td>
+		<td>Поїзд</td>
+		<td class="align-right ticket_info w-right">
+							135*ЛБ
+						ФІРМ НШ
+		</td>
+	</tr>
+	<tr>
+		<td class="nowrap w1" colspan="2">Відправлення</td>
+		<td class="w1">2218200</td>
+		<td class="upper ticket_info" colspan="2">Івано-Франківськ</td>
+		<td>Вагон</td>
+		<td class="align-right ticket_info">12 П ОДС</td>
+	</tr>
+	<tr>
+		<td class="nowrap" colspan="2">Призначення</td>
+		<td>2208001</td>
+		<td class="upper ticket_info" colspan="2">Одеса-Головна</td>
+		<td>Місце</td>
+		<td class="align-right ticket_info">024 Повний</td>
+	</tr>
+	<tr>
+		<td colspan="3">Дата/час відпр.</td>
+		<td class="ticket_info" colspan="2">24.04.2016 18:26</td>
+		<td>Сервіс</td>
+		<td class="align-right">БІЛ</td>
+	</tr>
+	<tr>
+		<td class="ch-num-l" colspan="2">Дата/час приб.</td>
+		<td class="ch-num">
+					</td>
+		<td class="ticket_info" colspan="2">25.04.2016 09:44</td>
+		<td colspan="2"></td>
+	</tr>
+	<tr>
+		<td colspan="7">
+			ВАРТ=<b>160,48ГРН</b>(КВ.56,55+ПЛ.44,09+СП.20,83+ПДВ.26,72+СТР.0,21+КЗБ.12,08)<br/>
+							В Т.Ч.
+									БІЛ-25,00
+								(З ПДВ)<br/>
+																		#СТР.ВІД Н/В 6000Н.М. ТДВ"СТ", ДОМІНАНТА"КИЇВ,САКСАГАНСЬКОГО,119, T0442200755<br/>
+			<b>ЧАС ВІДПРАВЛЕННЯ КИЇВСЬКИЙ</b>
+		</td>
+	</tr>
+	<tr>
+		<td class="center" colspan="3">
+			<img alt="QR" src="data:image/gif;base64,R0lGODdh1QDVAHcAACwAAAAA1QDVAIcAAAD///8AF0wAHuwAB6AAMwwZAAAY8Jj///wAAAIY8GR7E10Y8DgaCpwAAAAY8FR56fYZF0wVAAgAAAAY8LwAAAIY8LgVAAgAAAD94AD90AAAAAAY8IC2V1i2WWoBDCmFAA8AAAABDCkAAAAAAAEAAAAY8JC2WMUBDCkBAACZZ/BQqyUBDCkAAwAAAAC2rZ62rSMBDosAAAAAAACYj0AAAAAAACgAAAAAAAAY8PyYj2gY9Ki2rYAAAAAAAAAAAAAY9BQAACgAAACYj0AAAACfAAAFDp+Yj0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/gAAH+yAAD+tSAAAH/+AMT+AVAACAD+AACyMxAAA/gAAH+yAAD+tSAAAH/+AMT+AVAAFikY8uQACAD+AACyAEAAA/gAAH+yAAD+tSAAAH/+AMT+AVAAHIMY8xR6i8j+AACyAEAAAAD+AAAAAACyAEAAAAAAFinx+Af+tSD+AMS0+BgAAwD+AAAAAACyAEAY9Ax6OL7+ATh6OJrx/9cAAAD+AAADCCC2soqYj2gY9Ki2VOm2UIpQ+p2iCEAAAAZRDP4Y9eCiCEAAAAEY84S2bJoFDp8AAFQY9GgY9KgY9EBQ7dUFDp8AAFQY9GhQ7d0AAAAAAACjasgAAAIAABBAfVAY89hAfV8Y89AY9eCiCEAAAAGiCEAY8/Bclz4Y8/xAfQEY8/CiCEAI/wABCBxIsKBBgwESHgSQsKHCgQ4XQmxI0CHFiRYrWnzIcGMAiQIjghRZ0KNJkgtNglzJsiVCjiU3aoR5EKXHmTZvhtQpEWXNizFPqhzJ06XRozNTysT4kSjMolB5Du0JVCnNnUKL/lyKtKvRqjir+nz5lGvHjExJTrXalOrVs1nRupXrdWvcnHRXjoW71u5djn/pavV7l21asYHfJkac12nbsIODJj5cmDLLxY9xUn6MmXBlrHsNkz2ptzPowJAze84qmi9j1KNhn37bOnVjybIxczbL9m/rtaYlly6rerZg3bQj4ybeNvTw4pqRAqeddPTz6rHNIk/O23N0uF6dg//uOh069u+1wW5+HXy5ectM45NXL1x61PdY7V7H2Fv79v74ubYbYPRdVqB8R5VnYHHigcffZhBmp1hkod0X13nfVeibcQMuqJ9j503VF4erfSihbff9VmBuKQ5nYnrMqUXhjN05eOJ6/kEnI3efKeiidSA+OB6QNxq3YIN1IYgea0IK2FyLTr344mtSwmfkcwcmiZ6STOYXoZMYblVlfV4OSaZ7qR2ZpZZmLilUiFJB6daYbg7I4Io5Iqkcm0py+WaTIspp1WpdOskec4TWeJaaOQKI14VNOnoopO5RamiMiEo4YplzCYqjnYWueSmon6H4J4eTbomqoqKGymN5lrb/euqoNE72aZp9rnrbolg2miippEX6q6mbskkloIzVqayfdsJJ3LJtHsspknwmmOm0yTILrY28Rnttt9xKCy5eqlabpLjofptus8g+q+273rKLLXXm2ifvuNnGuy258Iar7r/3invudrZWSqeoX45KbIlWCrjwpwRHXGjCuXLaK6bHBWtwwxZ2LPHHpVLcZpidTvporSdj/LCu7V3coZZ7xYxngF/NarLJzD6p8o/W+jrwhEDrSK+9PupqW845y0rzxhbPF/TBQ/dctMJfPpp01AgzDW549MnMY72uApsygdeO7WG8+Hl956lT40oi2i6jfHPQgfYoMJHlUto2x3F+//ur2mMD3rfed59ZMeE+o1l14cQKjrHjcrHoN96Hd7n3lW/7O7RsR9+q6Y6W0jlsu2mniiDn1JrZoNkVMyp06VF7Pi/swGa44chBcjtlnlzvumbqVM++H+Y2op518b+bjntLyiUfu9GkD+/w6bfrnvvqylvPPKt0dz0rgLbXiHjGoetrom69rx3546M7Ju2m4wdeK8nIL5Y+w/iK/7131OvPtsca21b4CiY1/B2vWHELGd82pyi3BaVzYFogARNVswa6z378W54DwSemxeVpbgGkoEsQeMEJSvBirhuUB8kHQhJeqoK7SmD5iIe9GDbM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"/>		</td>
+		<td colspan="4" class="info arial">
+							<p>Цей Посадочний документ є підставою для проїзду без звернення у касу. Посадочний документ являється розрахунковим документом.</p>
+						<p>Повернення даного Посадочного документа можливе до відправлення поїзда.</p>
+		</td>
+	</tr>
+</table>
+            </div>
+    <div class="hostName">[http://booking.uz.gov.ua/]</div>
+    <div class="clear"></div>
+
+        <div class="clear page-break"></div>
+                <div class="text">
+        <h3>
+                            Посадочний документ                    </h3>
+    </div>
+    <div class="blank electronic" data-doctype="travel">
+                    <table>
+	<tr class="sizing">
+		<td style="width: 102px"></td>
+		<td style="width: 43px"></td>
+		<td style="width: 79px"></td>
+		<td style="width: 135px"></td>
+		<td style="width: 245px"></td>
+		<td style="width: 142px"></td>
+		<td style="width: 171px"></td>
+	</tr>
+	<tr class="frow">
+		<td class="terminal" rowspan="2">
+			TEРM. №61
+		</td>
+		<td class="bold arial v-top" colspan="3">
+			ПОСАДОЧНИЙ ДОКУМЕНТ
+		</td>
+		<td class="bold nowrap" colspan="2">000B3B41-<span class="uid">87F2-7DC2-0001</span></td>
+		<td class="bold arial w-right" rowspan="2">
+			ПН:400758126555<br/>
+			ФН:3000182012<br/>
+			ЗН:ЗТ00000003<br/>
+			ФК:10905178
+		</td>
+	</tr>
+	<tr>
+		<td class="address v-top nowrap" colspan="3">
+                            ПАТ "УКРЗАЛІЗНИЦЯ"<br/>м.Київ, вул.Тверська, буд.5
+            		</td>
+		<td class="v-top order_num" colspan="2">#ЖЛ1-Н1-3108733-1104</td>
+	</tr>
+	<tr>
+		<td>МПС</td>
+		<td class="bold arial center" colspan="5">
+			ЦЕЙ ПОСАДОЧНИЙ ДОКУМЕНТ Є ПІДСТАВОЮ ДЛЯ ПРОЇЗДУ
+		</td>
+		<td class="align-right nowrap">11.04.2016 20:52</td>
+	</tr>
+	<tr>
+		<td colspan="3">Прізвище, Ім’я</td>
+		<td colspan="2">Жижко Сергій</td>
+		<td>Поїзд</td>
+		<td class="align-right ticket_info w-right">
+							136 ШБ
+						ФІРМ НШ
+		</td>
+	</tr>
+	<tr>
+		<td class="nowrap w1" colspan="2">Відправлення</td>
+		<td class="w1">2208001</td>
+		<td class="upper ticket_info" colspan="2">Одеса-Головна</td>
+		<td>Вагон</td>
+		<td class="align-right ticket_info">13 П ОДС</td>
+	</tr>
+	<tr>
+		<td class="nowrap" colspan="2">Призначення</td>
+		<td>2218200</td>
+		<td class="upper ticket_info" colspan="2">Івано-Франківськ</td>
+		<td>Місце</td>
+		<td class="align-right ticket_info">014 Пільговий</td>
+	</tr>
+	<tr>
+		<td colspan="3">Дата/час відпр.</td>
+		<td class="ticket_info" colspan="2">22.04.2016 16:37</td>
+		<td>Сервіс</td>
+		<td class="align-right">БІЛ</td>
+	</tr>
+	<tr>
+		<td class="ch-num-l" colspan="2">Дата/час приб.</td>
+		<td class="ch-num">
+					</td>
+		<td class="ticket_info" colspan="2">23.04.2016 07:32</td>
+		<td colspan="2"></td>
+	</tr>
+	<tr>
+		<td colspan="7">
+			ВАРТ=<b>99,99ГРН</b>(КВ.28,27+ПЛ.22,05+СП.20,83+ПДВ.16,65+СТР.0,11+КЗБ.12,08)<br/>
+							В Т.Ч.
+									БІЛ-25,00
+								(З ПДВ)<br/>
+																			#ДОКУМЕНТ ПІЛЬГОВИКА: ПІЛЬГ СТУД ХЕ09089807<br/>
+						#СТР.ВІД Н/В 6000Н.М. ТДВ СТ"ДОМIНАНТА", КИЇВ,САКСАГАНСЬКОГО,119, T0442200755<br/>
+			<b>ЧАС ВІДПРАВЛЕННЯ КИЇВСЬКИЙ</b>
+		</td>
+	</tr>
+	<tr>
+		<td class="center" colspan="3">
+			<img alt="QR" src="data:image/gif;base64,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"/>		</td>
+		<td colspan="4" class="info arial">
+							<p>Цей Посадочний документ є підставою для проїзду без звернення у касу. Посадочний документ являється розрахунковим документом.</p>
+						<p>Повернення даного Посадочного документа можливе до відправлення поїзда.</p>
+		</td>
+	</tr>
+</table>
+            </div>
+    <div class="hostName">[http://booking.uz.gov.ua/]</div>
+    <div class="clear page-break"></div>
+    <div class="text">
+        <h3>
+                            Посадочний документ                    </h3>
+    </div>
+    <div class="blank electronic" data-doctype="travel">
+                    <table>
+	<tr class="sizing">
+		<td style="width: 102px"></td>
+		<td style="width: 43px"></td>
+		<td style="width: 79px"></td>
+		<td style="width: 135px"></td>
+		<td style="width: 245px"></td>
+		<td style="width: 142px"></td>
+		<td style="width: 171px"></td>
+	</tr>
+	<tr class="frow">
+		<td class="terminal" rowspan="2">
+			TEРM. №61
+		</td>
+		<td class="bold arial v-top" colspan="3">
+			ПОСАДОЧНИЙ ДОКУМЕНТ
+		</td>
+		<td class="bold nowrap" colspan="2">000B3B41-<span class="uid">87F2-7DC2-0002</span></td>
+		<td class="bold arial w-right" rowspan="2">
+			ПН:400758126555<br/>
+			ФН:3000182012<br/>
+			ЗН:ЗТ00000003<br/>
+			ФК:10905179
+		</td>
+	</tr>
+	<tr>
+		<td class="address v-top nowrap" colspan="3">
+                            ПАТ "УКРЗАЛІЗНИЦЯ"<br/>м.Київ, вул.Тверська, буд.5
+            		</td>
+		<td class="v-top order_num" colspan="2">#ЖЛ1-Н2-3108733-1104</td>
+	</tr>
+	<tr>
+		<td>МПС</td>
+		<td class="bold arial center" colspan="5">
+			ЦЕЙ ПОСАДОЧНИЙ ДОКУМЕНТ Є ПІДСТАВОЮ ДЛЯ ПРОЇЗДУ
+		</td>
+		<td class="align-right nowrap">11.04.2016 20:52</td>
+	</tr>
+	<tr>
+		<td colspan="3">Прізвище, Ім’я</td>
+		<td colspan="2">Пластун Анна</td>
+		<td>Поїзд</td>
+		<td class="align-right ticket_info w-right">
+							136 ШБ
+						ФІРМ НШ
+		</td>
+	</tr>
+	<tr>
+		<td class="nowrap w1" colspan="2">Відправлення</td>
+		<td class="w1">2208001</td>
+		<td class="upper ticket_info" colspan="2">Одеса-Головна</td>
+		<td>Вагон</td>
+		<td class="align-right ticket_info">13 П ОДС</td>
+	</tr>
+	<tr>
+		<td class="nowrap" colspan="2">Призначення</td>
+		<td>2218200</td>
+		<td class="upper ticket_info" colspan="2">Івано-Франківськ</td>
+		<td>Місце</td>
+		<td class="align-right ticket_info">015 Повний</td>
+	</tr>
+	<tr>
+		<td colspan="3">Дата/час відпр.</td>
+		<td class="ticket_info" colspan="2">22.04.2016 16:37</td>
+		<td>Сервіс</td>
+		<td class="align-right">БІЛ</td>
+	</tr>
+	<tr>
+		<td class="ch-num-l" colspan="2">Дата/час приб.</td>
+		<td class="ch-num">
+					</td>
+		<td class="ticket_info" colspan="2">23.04.2016 07:32</td>
+		<td colspan="2"></td>
+	</tr>
+	<tr>
+		<td colspan="7">
+			ВАРТ=<b>160,48ГРН</b>(КВ.56,55+ПЛ.44,09+СП.20,83+ПДВ.26,72+СТР.0,21+КЗБ.12,08)<br/>
+							В Т.Ч.
+									БІЛ-25,00
+								(З ПДВ)<br/>
+																		#СТР.ВІД Н/В 6000Н.М. ТДВ СТ"ДОМIНАНТА", КИЇВ,САКСАГАНСЬКОГО,119, T0442200755<br/>
+			<b>ЧАС ВІДПРАВЛЕННЯ КИЇВСЬКИЙ</b>
+		</td>
+	</tr>
+	<tr>
+		<td class="center" colspan="3">
+			<img alt="QR" src="data:image/gif;base64,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"/>		</td>
+		<td colspan="4" class="info arial">
+							<p>Цей Посадочний документ є підставою для проїзду без звернення у касу. Посадочний документ являється розрахунковим документом.</p>
+						<p>Повернення даного Посадочного документа можливе до відправлення поїзда.</p>
+		</td>
+	</tr>
+</table>
+            </div>
+    <div class="hostName">[http://booking.uz.gov.ua/]</div>
+    <div class="clear"></div>
+
+        <div class="clear"></div>
+</div>
+
+                                <div class="clear"></div>
+                <br/>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
